@@ -109,7 +109,7 @@ gpgcheck=1
 file:///medi/repodata/repomd.xml: [Errno 14] curl#37 - "Couldn't open file /medi/repodata/repomd.xml"
 > 检查一下yum源的配置文件，baseurl路径是否有写错误
 3. 显示依赖不全
-> 从头挂载，从新配置yum源
+> 从头挂载，重新配置yum源
 
 #### 安装iptables服务
 在 **Firewall** 机器上安装
