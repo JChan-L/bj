@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///C:/Users/86134/AppData/Local/Temp/mume2021107-62120-1gpr7e6.ltgx.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>markdown</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="./markdown_files/katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="./markdown_files/mermaid.min.js.下载" charset="UTF-8"></script>
+      
+      
+      
+      <script type="text/javascript" src="./markdown_files/raphael.js.下载" charset="UTF-8"></script><script type="text/javascript" src="./markdown_files/flowchart.min.js.下载" charset="UTF-8"></script>
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="markdown%E6%95%99%E7%A8%8B">Markdown教程</h1>
+
+<h2 class="mume-header" id="%E6%A0%87%E9%A2%98">标题</h2>
+
+<ol>
+<li>使用 = 和 - 标记一级和二级标题<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token title important">这是一级标题
+<span class="token punctuation">===========</span></span>
+<span class="token title important">这是二级标题
+<span class="token punctuation">-----------</span></span>
+</pre></li>
+<li>使用 # 号标记<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题</span>
+<span class="token title important"><span class="token punctuation">#####</span> 五级标题</span>
+<span class="token title important"><span class="token punctuation">######</span> 六级标题</span>
+</pre></li>
+</ol>
+<h2 class="mume-header" id="%E6%AE%B5%E8%90%BD">段落</h2>
+
+<p>两个以上空格加上回车即可换行</p>
+<h2 class="mume-header" id="%E5%AD%97%E4%BD%93">字体</h2>
+
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文本</span><span class="token punctuation">*</span></span>
+<span class="token italic"><span class="token punctuation">_</span><span class="token content">斜体文本</span><span class="token punctuation">_</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">粗体文本</span><span class="token punctuation">**</span></span>
+<span class="token bold"><span class="token punctuation">__</span><span class="token content">粗体文本</span><span class="token punctuation">__</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">粗体斜文本</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span>
+<span class="token bold"><span class="token punctuation">__</span><span class="token content"><span class="token italic"><span class="token punctuation">_</span><span class="token content">粗体斜文本</span><span class="token punctuation">_</span></span></span><span class="token punctuation">__</span></span>
+</pre><h2 class="mume-header" id="%E5%88%86%E9%9A%94%E7%BA%BF">分隔线</h2>
+
+<p>使用3个以上（星号）*,（减号）-,（底线）_,</p>
+<p>注：行内不能有任何东西</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token hr punctuation">***</span>
+<span class="token hr punctuation">* * *</span>
+<span class="token title important">*******
+<span class="token punctuation">---</span></span>
+___
+</pre><h2 class="mume-header" id="%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</h2>
+
+<p>在文字两端加上两个波浪线~~，如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>~~你真是个小傻瓜~~
+</code></pre><blockquote>
+<p><s>你真是个小傻瓜</s></p>
+</blockquote>
+<h2 class="mume-header" id="%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</h2>
+
+<p>通过HTML<code>&lt;u&gt;</code>标签来实现</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>&lt;u&gt;带下划线文本&lt;/u&gt;
+</code></pre><blockquote>
+<p><u>带下划线文本</u></p>
+</blockquote>
+<h2 class="mume-header" id="%E8%84%9A%E6%B3%A8">脚注</h2>
+
+<p>脚注是对文本的补充说明。<br>
+创建脚注格式类似这样<sup class="footnote-ref"><a href="file:///C:/Users/86134/AppData/Local/Temp/mume2021107-62120-1gpr7e6.ltgx.html#fn1" id="fnref1">[1]</a></sup></p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>代码如下：
+创建脚注格式类似这样 [^RUNOOB]
+[^RUNOOB]: 菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+</code></pre><h2 class="mume-header" id="%E5%88%97%E8%A1%A8">列表</h2>
+
+<p><strong>这些标记后面必须要有一个空格</strong></p>
+<ol>
+<li>
+<p>无序列表：<br>
+星号（*）；<br>
+加号（+）；<br>
+减号（-）；</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>* 第一项
++ 第二项
+- 第三项
+</code></pre><blockquote>
+<ul>
+<li>第一项</li>
+</ul>
+<ul>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第三项</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>有序列表，数字后面加上<code>.</code>，如：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>1. 第一项
+2. 第二项
+</code></pre></li>
+<li>
+<p>列表嵌套</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code> 1. 第一项：
+    - 第一项嵌套的第一个元素
+        1. 第一项嵌套的第一个元素的第一个元素  
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素
+</code></pre><ol>
+<li>第一项：
+<ul>
+<li>第一项嵌套的第一个元素
+<ol>
+<li>第一项嵌套的第一个元素的第一个元素</li>
+</ol>
+</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：
+<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 class="mume-header" id="%E5%8C%BA%E5%9D%97">区块</h2>
+
+<p>段落开头使用<code>&gt;</code>符号 ，然后后面紧跟一个空格符号：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>&gt; 区块引用
+</code></pre><blockquote>
+<p>区块引用</p>
+</blockquote>
+<p>另外区块是可以嵌套的，一个<code>&gt;</code>符号是最外层，两个<code>&gt;</code>符号是第一层嵌套，以此类推：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套
+</code></pre><blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><strong>区块中使用列表</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>&gt; 区块中使用列表
+&gt; 1. 第一项
+&gt; 2. 第二项
+&gt; + 第一项
+&gt; + 第二项
+&gt; + 第三项
+</code></pre><blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<p><strong>列表中使用区块</strong></p>
+<p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
+<p>列表中使用区块实例如下：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>* 第一项
+    &gt; 菜鸟教程
+    &gt; 学的不仅是技术更是梦想
+* 第二项
+</code></pre><ul>
+<li>第一项
+<blockquote>
+<p>菜鸟教程<br>
+学的不仅是技术更是梦想</p>
+</blockquote>
+</li>
+<li>第二项</li>
+</ul>
+<h2 class="mume-header" id="%E4%BB%A3%E7%A0%81">代码</h2>
+
+<p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>`printf()` 函数
+</code></pre><p><code>printf()</code> 函数</p>
+<h2 class="mume-header" id="%E9%93%BE%E6%8E%A5">链接</h2>
+
+<pre data-role="codeBlock" data-info="" class="language-"><code>[链接名称](链接地址)
+
+或者
+
+&lt;链接地址&gt;
+
+这是一个链接 [菜鸟教程](https://www.runoob.com)
+</code></pre><p>这是一个链接<a href="https://www.runoob.com/">菜鸟教程</a></p>
+<p><a href="https://www.runoob.com/">https://www.runoob.com</a></p>
+<p><strong>高级链接</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>这是个链接[百度][baidu]
+
+[baidu]: http://www.baidu.com
+</code></pre><p>这是个链接<a href="http://www.baidu.com/">百度</a></p>
+<h2 class="mume-header" id="%E5%9B%BE%E7%89%87">图片</h2>
+
+<p><strong>图片语法格式如下</strong>：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>![alt 属性文本](图片地址)
+
+![alt 属性文本](图片地址 "可选标题")
+
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
+
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png "RUNOOB")
+</code></pre><p><img src="#" alt="alt 属性文本"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="alt 属性文本" title="可选标题"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
+<h2 class="mume-header" id="%E8%A1%A8%E6%A0%BC">表格</h2>
+
+<p><strong>使用 <code>|</code> 来分隔不同的单元格，使用 <code>-</code> 来分隔表头和其他行。</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>|  表头   | 表头  |
+|  ----  | ----  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |
+</code></pre><table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对齐方式</strong></p>
+<ul>
+<li><code>-:</code>设置内容和标题栏居右对齐</li>
+<li><code>:-</code>设置内容和标题栏居左对齐</li>
+<li><code>:-:</code>设置内容和标题栏居中对齐</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-"><code>| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐(单元格)</th>
+<th style="text-align:right">右对齐(单元格)</th>
+<th style="text-align:center">居中对齐(单元格)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95">高级用法</h2>
+
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。<br>
+目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑
+</code></pre><p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<p><strong>转义</strong><br>
+Markdown 使用反斜杠转义特殊字符：</p>
+<blockquote>
+<p><strong>文本加粗</strong><br>
+** 正常显示星号 **</p>
+</blockquote>
+<p><strong>公式</strong><br>
+插入数学公式时，使用两个美元符 <code>$$</code> 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>$$
+\mathbf{V}_1 \times \mathbf{V}_2 
+$$
+</code></pre><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi mathvariant="bold">V</mi><mn>1</mn></msub><mo>×</mo><msub><mi mathvariant="bold">V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{V}_1 \times \mathbf{V}_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83611em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01597em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83611em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01597em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<h3 class="mume-header" id="%E6%B5%81%E7%A8%8B%E5%9B%BE">流程图</h3>
+
+<div class="mermaid" data-processed="true"><svg id="mermaid-1636271087535" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="205" style="max-width: 498.998779296875px;" viewBox="0 0.0000019073486328125 498.998779296875 205"><style>#mermaid-1636271087535{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-1636271087535 .error-icon{fill:#552222;}#mermaid-1636271087535 .error-text{fill:#552222;stroke:#552222;}#mermaid-1636271087535 .edge-thickness-normal{stroke-width:2px;}#mermaid-1636271087535 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1636271087535 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1636271087535 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1636271087535 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1636271087535 .marker{fill:#333333;stroke:#333333;}#mermaid-1636271087535 .marker.cross{stroke:#333333;}#mermaid-1636271087535 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1636271087535 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-1636271087535 .cluster-label text{fill:#333;}#mermaid-1636271087535 .cluster-label span{color:#333;}#mermaid-1636271087535 .label text,#mermaid-1636271087535 span{fill:#333;color:#333;}#mermaid-1636271087535 .node rect,#mermaid-1636271087535 .node circle,#mermaid-1636271087535 .node ellipse,#mermaid-1636271087535 .node polygon,#mermaid-1636271087535 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-1636271087535 .node .label{text-align:center;}#mermaid-1636271087535 .node.clickable{cursor:pointer;}#mermaid-1636271087535 .arrowheadPath{fill:#333333;}#mermaid-1636271087535 .edgePath .path{stroke:#333333;stroke-width:1.5px;}#mermaid-1636271087535 .flowchart-link{stroke:#333333;fill:none;}#mermaid-1636271087535 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-1636271087535 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-1636271087535 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-1636271087535 .cluster text{fill:#333;}#mermaid-1636271087535 .cluster span{color:#333;}#mermaid-1636271087535 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80,100%,96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-1636271087535:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M84,78.5999984741211L92.16666666666667,78.5999984741211C100.33333333333333,78.5999984741211,116.66666666666667,78.5999984741211,129,78.5999984741211C141.33333333333334,78.5999984741211,149.66666666666666,78.5999984741211,153.83333333333334,78.5999984741211L158,78.5999984741211" marker-end="url(#arrowhead20)" style="fill:none"></path><defs><marker id="arrowhead20" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-C" id="L-B-C" style="opacity: 1;"><path class="path" d="M210,78.5999984741211L214.16666666666666,78.5999984741211C218.33333333333334,78.5999984741211,226.66666666666666,78.5999984741211,235.08333353996275,78.68333180745442C243.50000041325885,78.76666514078777,252.00000082651772,78.93333180745442,256.25000103314716,79.01666514078777L260.50000123977657,79.0999984741211" marker-end="url(#arrowhead21)" style="fill:none"></path><defs><marker id="arrowhead21" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M338.77872490437716,61.9674697354624L347.81643823411633,56.77289131906209C356.8541515638556,51.578312902661786,374.9295782233341,41.18915606986116,390.23291655307327,35.99457765346086C405.5362548828125,30.799999237060547,418.0675048828125,30.799999237060547,424.3331298828125,30.799999237060547L430.5987548828125,30.799999237060547" marker-end="url(#arrowhead22)" style="fill:none"></path><defs><marker id="arrowhead22" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-E" id="L-C-E" style="opacity: 1;"><path class="path" d="M338.7787233153063,96.23252632229746L347.8164369098907,101.26043822044483C356.854150504475,106.28835011859219,374.92957769364375,116.34417391488692,390.2329162882281,121.37208581303427C405.5362548828125,126.39999771118164,418.0675048828125,126.39999771118164,424.3331298828125,126.39999771118164L430.5987548828125,126.39999771118164" marker-end="url(#arrowhead23)" style="fill:none"></path><defs><marker id="arrowhead23" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A&#39; L-LE-B"></span></div></foreignobject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-C" class="edgeLabel L-LS-B&#39; L-LE-C"></span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(393.0050048828125,30.799999237060547)" style="opacity: 1;"><g transform="translate(-12.59375,-12.800000190734863)" class="label"><rect rx="0" ry="0" width="25.1875" height="25.600000381469727"></rect><foreignobject width="25.1875" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C&#39; L-LE-D">a=1</span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(393.0050048828125,126.39999771118164)" style="opacity: 1;"><g transform="translate(-12.59375,-12.800000190734863)" class="label"><rect rx="0" ry="0" width="25.1875" height="25.600000381469727"></rect><foreignobject width="25.1875" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-E" class="edgeLabel L-LS-C&#39; L-LE-E">a=2</span></div></foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-9" transform="translate(58,78.5999984741211)" style="opacity: 1;"><rect rx="0" ry="0" x="-26" y="-22.800000190734863" width="52" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-16,-12.800000190734863)"><foreignobject width="32" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">方形</div></foreignobject></g></g></g><g class="node default" id="flowchart-B-10" transform="translate(184,78.5999984741211)" style="opacity: 1;"><rect rx="5" ry="5" x="-26" y="-22.800000190734863" width="52" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-16,-12.800000190734863)"><foreignobject width="32" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">圆角</div></foreignobject></g></g></g><g class="node default" id="flowchart-C-12" transform="translate(307.70562744140625,78.5999984741211)" style="opacity: 1;"><polygon points="47.70562620162964,0 95.41125240325928,-47.70562620162964 47.70562620162964,-95.41125240325928 0,-47.70562620162964" transform="translate(-47.70562620162964,47.70562620162964)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-20.20625114440918,-12.800000190734863)"><foreignobject width="40.41250228881836" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">条件a</div></foreignobject></g></g></g><g class="node default" id="flowchart-D-14" transform="translate(460.79875564575195,30.799999237060547)" style="opacity: 1;"><rect rx="0" ry="0" x="-30.200000762939453" y="-22.800000190734863" width="60.400001525878906" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-20.200000762939453,-12.800000190734863)"><foreignobject width="40.400001525878906" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">结果1</div></foreignobject></g></g></g><g class="node default" id="flowchart-E-16" transform="translate(460.79875564575195,126.39999771118164)" style="opacity: 1;"><rect rx="0" ry="0" x="-30.200000762939453" y="-22.800000190734863" width="60.400001525878906" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-20.200000762939453,-12.800000190734863)"><foreignobject width="40.400001525878906" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">结果2</div></foreignobject></g></g></g><g class="node default" id="flowchart-F-17" transform="translate(58,174.1999969482422)" style="opacity: 1;"><rect rx="0" ry="0" x="-50" y="-22.800000190734863" width="100" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40,-12.800000190734863)"><foreignobject width="80" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">横向流程图</div></foreignobject></g></g></g></g></g></g></svg></div><blockquote>
+<p>```mermaid<br>
+graph LR<br>
+A[方形] --&gt;B(圆角)<br>
+B --&gt; C{条件a}<br>
+C --&gt;|a=1| D[结果1]<br>
+C --&gt;|a=2| E[结果2]<br>
+F[横向流程图]<br>
+```</p>
+</blockquote>
+<div class="mermaid" data-processed="true"><svg id="mermaid-1636271087608" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="423.811279296875" style="max-width: 277.4000244140625px;" viewBox="0 0.0000019073486328125 277.4000244140625 423.811279296875"><style>#mermaid-1636271087608{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-1636271087608 .error-icon{fill:#552222;}#mermaid-1636271087608 .error-text{fill:#552222;stroke:#552222;}#mermaid-1636271087608 .edge-thickness-normal{stroke-width:2px;}#mermaid-1636271087608 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1636271087608 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1636271087608 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1636271087608 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1636271087608 .marker{fill:#333333;stroke:#333333;}#mermaid-1636271087608 .marker.cross{stroke:#333333;}#mermaid-1636271087608 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1636271087608 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-1636271087608 .cluster-label text{fill:#333;}#mermaid-1636271087608 .cluster-label span{color:#333;}#mermaid-1636271087608 .label text,#mermaid-1636271087608 span{fill:#333;color:#333;}#mermaid-1636271087608 .node rect,#mermaid-1636271087608 .node circle,#mermaid-1636271087608 .node ellipse,#mermaid-1636271087608 .node polygon,#mermaid-1636271087608 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-1636271087608 .node .label{text-align:center;}#mermaid-1636271087608 .node.clickable{cursor:pointer;}#mermaid-1636271087608 .arrowheadPath{fill:#333333;}#mermaid-1636271087608 .edgePath .path{stroke:#333333;stroke-width:1.5px;}#mermaid-1636271087608 .flowchart-link{stroke:#333333;fill:none;}#mermaid-1636271087608 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-1636271087608 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-1636271087608 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-1636271087608 .cluster text{fill:#333;}#mermaid-1636271087608 .cluster span{color:#333;}#mermaid-1636271087608 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80,100%,96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-1636271087608:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M93.4000015258789,53.599998474121094L93.4000015258789,57.76666514078776C93.4000015258789,61.93333180745443,93.4000015258789,70.26666514078777,93.4000015258789,78.5999984741211C93.4000015258789,86.93333180745442,93.4000015258789,95.26666514078777,93.4000015258789,99.43333180745442L93.4000015258789,103.5999984741211" marker-end="url(#arrowhead43)" style="fill:none"></path><defs><marker id="arrowhead43" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-C" id="L-B-C" style="opacity: 1;"><path class="path" d="M93.4000015258789,149.1999969482422L93.4000015258789,153.36666361490884C93.4000015258789,157.53333028157553,93.4000015258789,165.86666361490884,93.48333485921223,174.28333048820494C93.56666819254558,182.69999736150103,93.73333485921223,191.1999977747599,93.81666819254555,195.44999798138937L93.90000152587889,199.69999818801878" marker-end="url(#arrowhead44)" style="fill:none"></path><defs><marker id="arrowhead44" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M75.18468336296647,276.3959324283656L69.02056959629529,285.7318190272696C62.85645582962413,295.06770562617356,50.52822829628179,313.7394788239815,44.36411452961062,329.3753654546747C38.20000076293945,345.01125208536786,38.20000076293945,357.6112521489461,38.20000076293945,363.9112521807353L38.20000076293945,370.2112522125244" marker-end="url(#arrowhead45)" style="fill:none"></path><defs><marker id="arrowhead45" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-E" id="L-C-E" style="opacity: 1;"><path class="path" d="M112.61531871604178,276.39593092156196L118.61276597817123,285.7318177715999C124.61021324030064,295.0677046216378,136.6051077645595,313.7394783217137,142.60255502668892,329.37536520354075C148.60000228881836,345.01125208536786,148.60000228881836,357.6112521489461,148.60000228881836,363.9112521807353L148.60000228881836,370.2112522125244" marker-end="url(#arrowhead46)" style="fill:none"></path><defs><marker id="arrowhead46" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A&#39; L-LE-B"></span></div></foreignobject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-C" class="edgeLabel L-LS-B&#39; L-LE-C"></span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(38.20000076293945,332.41125202178955)" style="opacity: 1;"><g transform="translate(-12.59375,-12.800000190734863)" class="label"><rect rx="0" ry="0" width="25.1875" height="25.600000381469727"></rect><foreignobject width="25.1875" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C&#39; L-LE-D">a=1</span></div></foreignobject></g></g><g class="edgeLabel" transform="translate(148.60000228881836,332.41125202178955)" style="opacity: 1;"><g transform="translate(-12.59375,-12.800000190734863)" class="label"><rect rx="0" ry="0" width="25.1875" height="25.600000381469727"></rect><foreignobject width="25.1875" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-E" class="edgeLabel L-LS-C&#39; L-LE-E">a=2</span></div></foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-27" transform="translate(93.4000015258789,30.799999237060547)" style="opacity: 1;"><rect rx="0" ry="0" x="-26" y="-22.800000190734863" width="52" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-16,-12.800000190734863)"><foreignobject width="32" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">方形</div></foreignobject></g></g></g><g class="node default" id="flowchart-B-28" transform="translate(93.4000015258789,126.39999771118164)" style="opacity: 1;"><rect rx="5" ry="5" x="-26" y="-22.800000190734863" width="52" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-16,-12.800000190734863)"><foreignobject width="32" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">圆角</div></foreignobject></g></g></g><g class="node default" id="flowchart-C-30" transform="translate(93.4000015258789,246.90562438964844)" style="opacity: 1;"><polygon points="47.70562620162964,0 95.41125240325928,-47.70562620162964 47.70562620162964,-95.41125240325928 0,-47.70562620162964" transform="translate(-47.70562620162964,47.70562620162964)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-20.20625114440918,-12.800000190734863)"><foreignobject width="40.41250228881836" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">条件a</div></foreignobject></g></g></g><g class="node default" id="flowchart-D-32" transform="translate(38.20000076293945,393.01125144958496)" style="opacity: 1;"><rect rx="0" ry="0" x="-30.200000762939453" y="-22.800000190734863" width="60.400001525878906" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-20.200000762939453,-12.800000190734863)"><foreignobject width="40.400001525878906" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">结果1</div></foreignobject></g></g></g><g class="node default" id="flowchart-E-34" transform="translate(148.60000228881836,393.01125144958496)" style="opacity: 1;"><rect rx="0" ry="0" x="-30.200000762939453" y="-22.800000190734863" width="60.400001525878906" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-20.200000762939453,-12.800000190734863)"><foreignobject width="40.400001525878906" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">结果2</div></foreignobject></g></g></g><g class="node default" id="flowchart-F-35" transform="translate(219.4000015258789,30.799999237060547)" style="opacity: 1;"><rect rx="0" ry="0" x="-50" y="-22.800000190734863" width="100" height="45.60000038146973" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40,-12.800000190734863)"><foreignobject width="80" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">竖向流程图</div></foreignobject></g></g></g></g></g></g></svg></div><blockquote>
+<p>```mermaid<br>
+graph TD<br>
+A[方形] --&gt; B(圆角)<br>
+B --&gt; C{条件a}<br>
+C --&gt; |a=1| D[结果1]<br>
+C --&gt; |a=2| E[结果2]<br>
+F[竖向流程图]<br>
+```</p>
+</blockquote>
+<div class="flow" id="flow_0"><svg height="600.34375" version="1.1" width="426.9140625" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.6px; top: -0.025px;" viewBox="0 0 426.9140625 600.34375" preserveAspectRatio="xMidYMid meet"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><marker id="raphael-marker-endblock33-objrwiz2" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock33-objorcdu" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock33-objjbasx" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock33-obj1pbxn" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock33-objpt8nf" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker><marker id="raphael-marker-endblock33-objvb9w9" markerHeight="3" markerWidth="3" orient="auto" refX="1.5" refY="1.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><use href="#raphael-marker-block" transform="rotate(180 1.5 1.5) scale(0.6,0.6)" stroke-width="1.6667" fill="black" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></use></marker></defs><rect x="0" y="0" width="63.21875" height="36.015625" rx="20" ry="20" fill="#ffffff" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="3" class="flowchart" id="st" transform="matrix(1,0,0,1,72.8281,37.2109)"></rect><text x="10" y="18.0078125" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="stt" class="flowchartt" transform="matrix(1,0,0,1,72.8281,37.2109)" stroke-width="1"><tspan dy="4.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">开始框</tspan></text><rect x="0" y="0" width="63.21875" height="36.015625" rx="0" ry="0" fill="#ffffff" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="3" class="flowchart" id="op" transform="matrix(1,0,0,1,72.8281,160.4375)"></rect><text x="10" y="18.0078125" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="opt" class="flowchartt" transform="matrix(1,0,0,1,72.8281,160.4375)" stroke-width="1"><tspan dy="4.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">处理框</tspan></text><path fill="#ffffff" stroke="#000000" d="M49.21875,24.609375L0,49.21875L98.4375,98.4375L196.875,49.21875L98.4375,0L0,49.21875" stroke-width="3" id="cond" class="flowchart" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,6,252.4531)"></path><text x="54.21875" y="49.21875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="condt" class="flowchartt" transform="matrix(1,0,0,1,6,252.4531)" stroke-width="1"><tspan dy="4.8046875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">判断框(是或否?)</tspan></text><path fill="#ffffff" stroke="#000000" d="M10,18.0078125L0,36.015625L110.40625,36.015625L130.40625,0L20,0L10,18.0078125" stroke-width="3" id="io" class="flowchart" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" transform="matrix(1,0,0,1,39.2344,438.1016)"></path><text x="30" y="18.0078125" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="iot" class="flowchartt" transform="matrix(1,0,0,1,39.2344,438.1016)" stroke-width="1"><tspan dy="4.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">输入输出框</tspan></text><rect x="0" y="0" width="63.21875" height="36.015625" rx="20" ry="20" fill="#ffffff" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="3" class="flowchart" id="e" transform="matrix(1,0,0,1,72.8281,561.3281)"></rect><text x="10" y="18.0078125" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="et" class="flowchartt" transform="matrix(1,0,0,1,72.8281,561.3281)" stroke-width="1"><tspan dy="4.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">结束框</tspan></text><rect x="0" y="0" width="83.203125" height="36.015625" rx="0" ry="0" fill="#ffffff" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="3" class="flowchart" id="sub1" transform="matrix(1,0,0,1,315.7109,283.6641)"></rect><rect x="10" y="0" width="63.203125" height="36.015625" rx="0" ry="0" fill="#ffffff" stroke="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="3" id="sub1i" transform="matrix(1,0,0,1,315.7109,283.6641)"></rect><text x="20" y="18.0078125" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" id="sub1t" class="flowchartt" transform="matrix(1,0,0,1,315.7109,283.6641)" stroke-width="1"><tspan dy="4.796875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">子流程</tspan></text><path fill="none" stroke="#000000" d="M104.4375,73.2265625C104.4375,73.2265625,104.4375,138.07394471019506,104.4375,155.93230582667456" stroke-width="3" marker-end="url(#raphael-marker-endblock33-objrwiz2)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M104.4375,196.453125C104.4375,196.453125,104.4375,234.65389585494995,104.4375,247.95328531763516" stroke-width="3" marker-end="url(#raphael-marker-endblock33-objorcdu)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M104.4375,350.890625C104.4375,350.890625,104.4375,415.73800721019506,104.4375,433.59636832667456" stroke-width="3" marker-end="url(#raphael-marker-endblock33-objjbasx)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="109.4375" y="360.890625" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" stroke-width="1"><tspan dy="4.8046875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">yes</tspan></text><path fill="none" stroke="#000000" d="M202.875,301.671875C202.875,301.671875,290.2318791374564,301.671875,311.2180043989938,301.671875" stroke-width="3" marker-end="url(#raphael-marker-endblock33-obj1pbxn)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="207.875" y="291.671875" text-anchor="start" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: start; font-family: Arial; font-size: 14px;" stroke-width="1"><tspan dy="4.8046875" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">no</tspan></text><path fill="none" stroke="#000000" d="M104.4375,474.1171875C104.4375,474.1171875,104.4375,538.9645697101951,104.4375,556.8229308266746" stroke-width="3" marker-end="url(#raphael-marker-endblock33-objpt8nf)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M398.9140625,301.671875C398.9140625,301.671875,423.9140625,301.671875,423.9140625,301.671875C423.9140625,301.671875,423.9140625,135.4375,423.9140625,135.4375C423.9140625,135.4375,104.4375,135.4375,104.4375,135.4375C104.4375,135.4375,104.4375,148.74147129058838,104.4375,155.9391276333481" stroke-width="3" marker-end="url(#raphael-marker-endblock33-objvb9w9)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path></svg></div><blockquote>
+<p>```flow<br>
+st=&gt;start: 开始框<br>
+op=&gt;operation: 处理框<br>
+cond=&gt;condition: 判断框(是或否?)<br>
+sub1=&gt;subroutine: 子流程<br>
+io=&gt;inputoutput: 输入输出框<br>
+e=&gt;end: 结束框<br>
+st-&gt;op-&gt;cond<br>
+cond(yes)-&gt;io-&gt;e<br>
+cond(no)-&gt;sub1(right)-&gt;op<br>
+```</p>
+</blockquote>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！ <a href="file:///C:/Users/86134/AppData/Local/Temp/mume2021107-62120-1gpr7e6.ltgx.html#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+      
+      
+    
+    
+    <script>
+// config mermaid init call
+// http://knsv.github.io/mermaid/#configuration
+//
+// You can edit the 'MERMAID_CONFIG' variable below.
+MERMAID_CONFIG = {
+  startOnLoad: false
+}
+
+if (window['MERMAID_CONFIG']) {
+  window['MERMAID_CONFIG'].startOnLoad = false
+  window['MERMAID_CONFIG'].cloneCssStyles = false
+  window['MERMAID_CONFIG'].theme = "default"
+}
+mermaid.initialize(window['MERMAID_CONFIG'] || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidechanged', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+} else {
+  mermaid.init(null, document.getElementsByClassName('mermaid'))
+}
+</script><div class="mermaidTooltip" style="opacity: 0;"></div>
+    
+    
+    <script>
+var flowcharts = document.getElementsByClassName('flow')
+for (var i = 0; i < flowcharts.length; i++) {
+  var flow = flowcharts[i]
+  try {
+    var diagram = flowchart.parse(flow.textContent)
+    flow.id = 'flow_' + i
+    flow.innerHTML = ''
+    diagram.drawSVG(flow.id)
+  } catch (error) {
+    flow.innerHTML = '<pre class="language-text">' + error.toString() + '</pre>'
+  }
+}
+</script><i title="Raphaël Colour Picker" style="display: none; color: white;"></i>
+    
+    
+  </body></html>
