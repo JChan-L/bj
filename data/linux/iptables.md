@@ -109,7 +109,7 @@ gpgcheck=1
 file:///medi/repodata/repomd.xml: [Errno 14] curl#37 - "Couldn't open file /medi/repodata/repomd.xml"
 > 检查一下yum源的配置文件，baseurl路径是否有写错误
 3. 显示依赖不全
-> 重头挂载，重新配置yum源
+> 从头挂载，从新配置yum源
 
 #### 安装iptables服务
 在 **Firewall** 机器上安装
@@ -159,7 +159,7 @@ iptables -F
 # 3. 添加SNAT，修改源目的地址的内网IP (注意大小写)
 iptables -t nat -A POSTROUTING -s 192.168.10.0/24 -j SNAT --to-source 202.112.113.112
 
-# 4. 查看时候添加成功
+# 4. 查看是否添加成功
 iptables -t nat -L
 
 ## 如果添加成功会有这一条记录（仔细找找）
@@ -194,7 +194,7 @@ netstat -an | grep :80
 tcp6       0      0 :::80                   :::*                    LISTEN
 ## 通常重启httpd服务之后就会开启80端口
 
-# 5. 测试，在本机查看WEB服务时候正常运行，能打开页面并看到页面内容说明成功，
+# 5. 测试，在本机查看WEB服务是否正常运行，能打开页面并看到页面内容说明成功，
 #   如果出现 无法连接、页面载入出错，重试 等字样，说明失败。
 #   请重新安装httpd服务，并重新操作上述步骤
 
