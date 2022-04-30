@@ -344,14 +344,15 @@ mount: /dev/sr0 &#x5199;&#x4FDD;&#x62A4;&#xFF0C;&#x5C06;&#x4EE5;&#x53EA;&#x8BFB;
 <span class="token assign-left variable">name</span><span class="token operator">=</span>redhat
 <span class="token assign-left variable">baseurl</span><span class="token operator">=</span>file:///media
 <span class="token assign-left variable">enabled</span><span class="token operator">=</span><span class="token number">1</span>
-<span class="token assign-left variable">gpgcheck</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">gpgcheck</span><span class="token operator">=</span><span class="token number">0</span>
 
 &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x4E4B;&#x540E;&#xFF08;:wq&#xFF09;
 &#x8F93;&#x5165;&#xFF1A;yum clean all
 </pre><h5 class="mume-header" id="%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;</h5>
 
 <ol>
-<li>&#x60A8;&#x5DF2;&#x542F;&#x7528;&#x8F6F;&#x4EF6;&#x5305; GPG &#x7B7E;&#x540D;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x6837;&#x5F88;&#x597D;&#x3002;&#x4E0D;&#x8FC7;&#x60A8;&#x5C1A;&#x672A;&#x5B89;&#x88C5;&#x4EFB;&#x4F55; GPG &#x516C;&#x94A5;......</li>
+<li>&#x60A8;&#x5DF2;&#x542F;&#x7528;&#x8F6F;&#x4EF6;&#x5305; GPG &#x7B7E;&#x540D;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x6837;&#x5F88;&#x597D;&#x3002;&#x4E0D;&#x8FC7;&#x60A8;&#x5C1A;&#x672A;&#x5B89;&#x88C5;&#x4EFB;&#x4F55; GPG &#x516C;&#x94A5;......<br>
+&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x7684;gpgcheck&#x7684;&#x503C;&#x4E3A;1&#xFF1B;</li>
 </ol>
 <blockquote>
 <p>rpm --import /media/RPM-GPG-KEY-redhat-release</p>

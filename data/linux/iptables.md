@@ -97,13 +97,14 @@ vim /etc/yum.repos.d/rhel.repo
 name=redhat
 baseurl=file:///media
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 保存退出之后（:wq）
 输入：yum clean all
 ```
 ##### 可能出现的问题
 1. 您已启用软件包 GPG 签名检查，这样很好。不过您尚未安装任何 GPG 公钥......
+这是因为你的gpgcheck的值为1；
 > rpm --import /media/RPM-GPG-KEY-redhat-release
 2. failure: repodata/repomd.xml from dvd: [Errno 256] No more mirrors to try.
 file:///medi/repodata/repomd.xml: [Errno 14] curl#37 - "Couldn't open file /medi/repodata/repomd.xml"
