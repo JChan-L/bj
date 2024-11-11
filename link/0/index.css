@@ -52,43 +52,43 @@ body {
 }
 
 .out_back {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/1.jpg") no-repeat;
 	background-size: 100%;
 	transform: translateZ(-150px);
 }
 
 .out_left {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/2.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateY(90deg) translateZ(150px);
 }
 
 .out_right {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/3.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateY(90deg) translateZ(-150px);
 }
 
 .out_top {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/4.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateX(90deg) translateZ(150px);
 }
 
 .out_bottom {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/5.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateX(90deg) translateZ(-150px);
 }
 
 .in_front {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/6.jpg") no-repeat;
 	background-size: 100%;
 	transform: translateZ(100px);
 }
 
 .in_back {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/7.jpg") no-repeat;
 	background-size: 100%;
 	transform: translateZ(-100px);
 }
@@ -100,43 +100,43 @@ body {
 }
 
 .in_right {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/1.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateY(90deg) translateZ(-100px);
 }
 
 .in_top {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/2.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateX(90deg) translateZ(100px);
 }
 
 .in_bottom {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/3.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateX(90deg) translateZ(-100px);
 }
 
 #react:hover .out_front {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/4.jpg") no-repeat;
 	background-size: 100%;
 	transform: translateZ(200px);
 }
 
 #react:hover .out_back {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/5.jpg") no-repeat;
 	background-size: 100%;
 	transform: translateZ(-200px);
 }
 
 #react:hover .out_left {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/6.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateY(90deg) translateZ(200px);
 }
 
 #react:hover .out_right {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/7.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateY(90deg) translateZ(-200px);
 }
@@ -148,7 +148,7 @@ body {
 }
 
 #react:hover .out_bottom {
-	background: url("img/0.jpg") no-repeat;
+	background: url("img/1.jpg") no-repeat;
 	background-size: 100%;
 	transform: rotateX(90deg) translateZ(-200px);
 }
